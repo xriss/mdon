@@ -10,13 +10,13 @@ We can include text here for the main item but as soon as we see a ## title we w
 
 ## part:eng Part of an item.
 
-### This is normal markdown contained in an item
-
 ```hjson
 {
   "extra":"data",
 }
 ```
+
+### This is normal markdown contained in an item
 
 Some text to also store.
 
