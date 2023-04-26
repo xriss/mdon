@@ -24,16 +24,16 @@ cmd.parse=function(argv)
 
 cmd.run=async function(argv)
 {
-	if( argv._[0]=="to" )
+	if( argv._[0]=="test" )
 	{
-		await require("./to.js").test(argv)
+		await require("./cmd_test.js").run(argv)
 		return
 	}
 
 	// help text
 	console.log(
 `
->	mdon to 
+>	mdon test
 
 Test code.
 
