@@ -6,6 +6,9 @@
 }
 ```
 
+Note the json code chunks imediatly after a title are optional but can contain any extra data we need.
+See https://hjson.github.io/ for more details about hjson which is just a slightly more relaxed human frendly version of json.
+
 We can include text here for the main item but as soon as we see a ## name: we will switch to a new part.
 
 Multiple # name: can apear in one file so of course multiple items can be contained in one file.
