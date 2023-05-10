@@ -1,0 +1,24 @@
+
+Anything at the start of the file will be ignored and probably deleted. 
+Any text inside a mdon code chunk will be parsed as hjson. If no 
+language is specified then mdon is assumed. So if you wish to include 
+code chunks make sure give the language.
+
+
+```mdon
+{
+  "extra":"data",
+  "special":
+```
+
+All of this text will be assigned to the "special" key and the whole 
+point of this is that it should be treated as markdown.
+
+```
+  "extra": stuff
+}
+```
+
+Extra text at the end of the file will be ignored. The last non 
+white space char of the code chunk mist be a : for the next chunk of 
+text to be assigned to it otherwise mdon code chunks are just merged.

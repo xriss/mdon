@@ -29,6 +29,12 @@ cmd.run=async function(argv)
 		await require("./cmd_test.js").run(argv)
 		return
 	}
+	else
+	if( argv._[0]=="convert" )
+	{
+		await require("./cmd_convert.js").run(argv)
+		return
+	}
 
 	// help text
 	console.log(
@@ -37,6 +43,9 @@ cmd.run=async function(argv)
 
 Test code.
 
+>	mdon convert
+
+Convert between mdon and json.
 
 `)
 }
