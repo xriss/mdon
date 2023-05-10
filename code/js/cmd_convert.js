@@ -8,8 +8,9 @@ See https://github.com/xriss/mdon for full notice.
 
 const cmd_convert=exports;
 
-const pfs=require("fs").promises
+const pfs=require("fs/promises")
 
+const convert=require("./convert.js")
 
 const ls=function(a) { console.log(util.inspect(a,{depth:null})); }
 
@@ -53,12 +54,16 @@ cmd_convert.run=async function(argv)
 			console.log(`
 Converting ${ifname} to json [${ofname}]
 `)
+			await convert.to_json(ifname,ofname)
+			return
 		}
 		else
 		{
 			console.log(`
 Converting ${ifname} to markdown [${ofname}]
 `)
+			await convert.to_markdown(ifname,ofname)
+			return
 		}
 	}
 

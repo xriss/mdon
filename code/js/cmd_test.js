@@ -8,7 +8,7 @@ See https://github.com/xriss/mdon for full notice.
 
 const cmd_test=exports;
 
-const pfs=require("fs").promises
+const pfs=require("fs/promises")
 
 
 const ls=function(a) { console.log(util.inspect(a,{depth:null})); }

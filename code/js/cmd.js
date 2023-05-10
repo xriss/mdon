@@ -9,7 +9,7 @@ See https://github.com/xriss/mdon for full notice.
 
 const cmd=exports;
 
-const pfs=require("fs").promises
+const pfs=require("fs/promises")
 
 
 const ls=function(a) { console.log(util.inspect(a,{depth:null})); }
@@ -39,10 +39,6 @@ cmd.run=async function(argv)
 	// help text
 	console.log(
 `
->	mdon test
-
-Test code.
-
 >	mdon convert
 
 Convert between mdon and json.
