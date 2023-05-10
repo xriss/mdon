@@ -8,17 +8,35 @@ code chunks make sure give the language.
 ```mdon
 {
   "extra":"data",
+  "sub":["one","two","three"]
   "special":
+  
 ```
 
 All of this text will be assigned to the "special" key and the whole 
 point of this is that it should be treated as markdown.
 
-```
-  "extra": stuff
+```json
+{
+  "more":""
 }
 ```
 
-Extra text at the end of the file will be ignored. The last non 
-white space char of the code chunk mist be a : for the next chunk of 
-text to be assigned to it otherwise mdon code chunks are just merged.
+The code chunk type above is neither mdon or null so will be included 
+as raw markdown in the special string. In case you need to escape a 
+code chunk.
+
+
+	indented:
+	
+
+Code chunks can just be indented.
+
+
+```
+  "more": stuff
+}
+```
+
+The last non white space char of the code chunk must be a : for the 
+next chunk of text to be assigned to it. So this text is ignored.

@@ -1,0 +1,11 @@
+{
+ "extra": "data",
+ "indented": "Code chunks can just be indented.\n\n",
+ "more": "stuff",
+ "special": "\n\nAll of this text will be assigned to the \"special\" key and the whole \npoint of this is that it should be treated as markdown.\n\n```json\n{\n  \"more\":\"\"\n}\n```\n\nThe code chunk above is neither mdon or null so will be included as raw \nmarkdown in the special string. In case you need to escape a code chunk.\n\n",
+ "sub": [
+  "one",
+  "two",
+  "three"
+ ]
+}
